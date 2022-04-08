@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>卷心菜的Blog</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -12,13 +12,32 @@
   <div id="app">加载中....</div>
   <script>
     window.$docsify = {
-      coverpage: true,
+      coverpage: true,//开启封面
       loadSidebar: true,
       name: '',
-      repo: 'https://github.com/icyrain11/my_docsify'
+      repo: 'https://github.com/icyrain11/my_docsify',
+      search: {
+        paths: 'auto',
+        placeholder: {
+          '/':'🔍 搜索',
+        },
+        noData: {
+          '/':'😒 找不到结果',
+        },
+
+        depth: 4,         //搜索标题的最大层级
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },//搜索框增加
     }
   </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <!-- docsify表情包 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <!-- 复制代码到剪切板 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+    <!--搜索功能-->
+    <script src="//cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
+    
 </body>
 </html>
